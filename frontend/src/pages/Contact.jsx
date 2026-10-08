@@ -47,7 +47,7 @@ function Contact() {
       <p>Fill out the form below to request a booking, or reach us directly:</p>
 
       <div className="contact-info">
-        <p>Phone: 0723 842 981</p>
+        <p>Phone: <a href="tel:0723842981">0723 842 981</a></p>
         <p>Location: Toniok, Eldama Ravine, Baringo</p>
       </div>
 
