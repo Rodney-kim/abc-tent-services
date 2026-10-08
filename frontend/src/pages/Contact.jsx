@@ -16,12 +16,30 @@ function Contact() {
     })
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    // We'll hook this up to the backend next
-    console.log('Form submitted:', formData)
-    setStatus('Booking request sent! We will get back to you soon.')
+  const handleSubmit = async (e) => {
+  e.preventDefault()
+  setStatus('Sending...')
+
+  try {
+    const response = await fetch('http://localhost:5000/api/booking', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+
+    if (response.ok) {
+      setStatus('Booking request sent! We will get back to you soon.')
+      setFormData({ name: '', phone: '', eventDate: '', details: '' })
+    } else {
+      setStatus('Something went wrong. Please try again or call us directly.')
+    }
+  } catch (error) {
+    setStatus('Could not reach the server. Please try again or call us directly.')
   }
+}
+
 
   return (
     <div className="contact">
