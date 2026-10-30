@@ -39,3 +39,11 @@ img {
   max-width: 100%;
   display: block;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
+section[id] {
+  scroll-margin-top: 64px;
+}

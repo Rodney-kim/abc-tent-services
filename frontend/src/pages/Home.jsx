@@ -10,8 +10,7 @@ function Home() {
           Baringo county
         </p>
         <div className="hero-actions">
-          <Link to="/contact" className="cta-button">Book Now</Link>
-          <a href="tel:0723842981" className="cta-button secondary">Call Us</a>
+         <a href="#contact" className="cta-button">Book Now</a>
         </div>
       </section>
 

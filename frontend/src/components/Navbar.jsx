@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import './Navbar.css'
 
 function Navbar() {
@@ -10,9 +9,9 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-inner">
         <div className="navbar-logo">
-          <Link to="/" onClick={close}>
+          <a href="#home" onClick={close}>
             ABC <span>Tent Services</span>
-          </Link>
+          </a>
         </div>
 
         <button
@@ -25,9 +24,9 @@ function Navbar() {
         </button>
 
         <ul className={`navbar-links ${open ? 'open' : ''}`}>
-          <li><Link to="/" onClick={close}>Home</Link></li>
-          <li><Link to="/gallery" onClick={close}>Gallery</Link></li>
-          <li><Link to="/contact" onClick={close}>Contact</Link></li>
+          <li><a href="#home" onClick={close}>Home</a></li>
+          <li><a href="#gallery" onClick={close}>Gallery</a></li>
+          <li><a href="#contact" onClick={close}>Contact</a></li>
         </ul>
       </div>
     </nav>
