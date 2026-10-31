@@ -4,3 +4,7 @@ dist/
 .DS_Store
 *.zip
 *.zip
+
+.env
+.env.*
+env
